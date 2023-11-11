@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="resources/css/style.css">
+</head>
+<body>
+    <div class="login-form">
+        <h2>Login</h2>
+        <form action="/auth" method="post">
+            <input type="text" name="user" id="user" placeholder="User" >
+            <input type="password" name="pass" id="pass" placeholder="Password" >
+            <input type="submit" class="btn-login" value="Login">
+        </form>
+    </div>
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma/bulma.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+
+        
+        <% if (typeof alert != "undefined")  { %>
+            <script>
+            Swal.fire({
+                title:'<%= alertTitle %>',
+                text:'<%= alertMessage %>',
+                icon:'<%= alertIcon %>',
+                showConfirmButton:<%= showConfirmButton %>,
+                timer: <%= timer %>,
+            }).then(()=>{
+                window.location='/<%= ruta %>'
+            })
+            </script>
+           <% } %>
+</body>
+</html>

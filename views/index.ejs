@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Inicio</title>
+    <link rel="stylesheet" href="resources/css/style.css">
+</head>
+<body>
+    <h1>Inicio</h1>
+    <% if (login) { %>                
+        <h1>Usuario conectado: <strong><%= name %></strong></h1>                        
+        <a href="logout" class="a-logout">Logout</a>
+    <% } %>
+</body>
+</html>

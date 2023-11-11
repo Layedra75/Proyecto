@@ -1,0 +1,128 @@
+body{
+  font-family: 'Roboto';  
+  background-color: #ffffff;
+  margin: auto;
+  text-align: center;
+}
+
+/* Login form */
+.login-form, .contenedor {
+  width: 300px;
+  margin: 0 auto;
+}
+.login-form h1 {
+  text-align: center;
+  color:midnightblue ;
+  font-size: 28px;
+  padding: 70px 0 10px 0;
+}
+.login-form input[type="password"],
+.login-form input[type="text"] {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ced4da;
+  margin-bottom: 10px;
+  box-sizing:border-box;
+}
+
+/* Estilos boton LOGIN*/
+.btn-login{
+  width: 100%;
+  padding: 15px;
+  background-color: #6f42c1;
+  border: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: large;
+  color: #ffffff;
+}
+.btn-login:hover,.btn-login:active{
+  color:#fff;
+  background-color:#61428f;
+  border-color:#61428f
+}
+.btn-login:focus{
+  box-shadow:0 0 0 3px rgba(121,82,179,0.25)
+}
+
+/* Estilo para el formulario */
+.register-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.register-form h1 {
+  text-align: center;
+}
+
+/* Estilo para etiquetas y campos de entrada */
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+}
+
+/* Estilo para el botón de registro */
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para el select */
+.select-css {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+}
+
+/* Estilos de link para realizar el LOGOUT*/
+.a-logout:link, .a-logout:visited {
+  background-color: white;
+  color: black;
+  border: 2px solid #F87171;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.a-logout:hover, .a-logout:active {
+  background-color: #F87171;
+  color: white;
+}

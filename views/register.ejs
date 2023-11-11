@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/css/style.css">
+    <title>Registro</title>
+</head>
+<body>
+    <div class="register-form">
+        <h1>Registro</h1>
+        
+        <form action="/register" method="POST">
+            <label for="rol">Rol</label>                          
+            <select id="rol" name="rol" class="select-css">
+                <option value="admin">Admin</option>
+                <option value="doctor">Doctor</option>                    
+            </select>
+            <br>
+
+            <label for="user">Usuario</label>
+            <input type="text" id="user" name="user" required maxlength="25">
+
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" required maxlength="55">
+
+            <label for="lastname">Apellido</label>
+            <input type="text" id="lastname" name="lastname" required maxlength="55">
+
+            <label for="cedula">Cédula</label>
+            <input type="text" id="cedula" name="cedula" maxlength="15" minlength="7" title="La cédula debe contener al menos 7 dígitos" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+
+            <label for="date">Fecha de Nacimiento</label>
+            <input type="date" id="date" name="date">
+            <br>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email"maxlength="150" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}" title="Ingresa una dirección de correo electrónico válida">
+
+            <label for="celular">Celular</label>
+            <input type="text" id="cedula" name="cedula" maxlength="15" minlength="10" title="La cédula debe contener al menos 10 digitos" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+
+            <label for="pass">Contraseña</label>
+            <input type="password" id="pass" name="pass" required>
+
+            <input type="submit" value="Registrar">
+        </form>
+    </div>
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma/bulma.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+
+    
+    <% if (typeof alert != "undefined")  { %>
+        <script>
+        Swal.fire({
+            title:'<%= alertTitle %>',
+            text:'<%= alertMessage %>',
+            icon:'<%= alertIcon %>',
+            showConfirmButton:<%= showConfirmButton %>,
+            timer: <%= timer %>
+        }).then(()=>{
+            window.location='/<%= ruta %>'
+        })
+        </script>
+       <% } %>
+
+</body>
+</html>
